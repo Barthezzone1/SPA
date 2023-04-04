@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPA Book</title>
+    <script src="https://unpkg.com/vue@3"></script>
+</head>
+<body>
+    <div id="app">
+        <form v-on:submit="save">
+            <label>Tytuł Książki</label>
+            <input v-model="title" type="text">
+            <label>Imię Autora</label>
+            <input v-model="name" type="text">
+            <label>Nazwisko Autora</label>
+            <input v-model="surname" type="text">
+            <button type="submit">Zapisz</button>
+        </form>
+    </div>
+
+    <style>
+        #app {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            margin-left: 40%;
+            margin-right: 40%;
+        }
+        label {
+            margin-top: 10px;
+        }
+        input {
+            margin-bottom: 10px;
+        }
+    </style>
+
+    <!-- Import app -->
+    <script src="book.js"></script>
+    <!-- Mount app -->
+    <script>
+        const mountedApp = app.mount('#app')
+    </script>
+</body>
+</html>
